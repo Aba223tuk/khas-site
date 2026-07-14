@@ -1188,20 +1188,8 @@ section{ padding:6rem 2rem; position:relative; }
   padding-top:1rem;
   border-top:1px solid var(--beige);
 }
-.menu-card-add{
-  flex:1;
-  background:var(--orange);
-  color:var(--white);
-  font-family:var(--sans);
-  font-size:.8rem; font-weight:700;
-  letter-spacing:.05em;
-  padding:.7rem 1rem;
-  border-radius:50px;
-  text-transform:uppercase;
-  transition:all .3s ease;
-  display:flex; align-items:center; justify-content:center; gap:.3rem;
-}
-.menu-card-add:hover{ background:var(--orange-dark); }
+
+
 .menu-card-info{
   width:38px; height:38px;
   border-radius:50%;
@@ -1335,59 +1323,17 @@ section{ padding:6rem 2rem; position:relative; }
   display:flex; flex-wrap:wrap; gap:.4rem;
   margin-bottom:1.5rem;
 }
-.modal-qty{
-  display:flex; align-items:center; gap:1rem;
-  margin-bottom:1.5rem;
-  padding:1rem 1.2rem;
-  background:var(--beige-light);
-  border-radius:16px;
-}
-.modal-qty-label{
-  font-family:var(--sans);
-  font-size:.9rem; font-weight:700;
-  color:var(--brown-dark);
-  flex:1;
-}
-.qty-controls{
-  display:flex; align-items:center; gap:.5rem;
-  background:var(--white);
-  border-radius:50px;
-  padding:.3rem;
-  border:2px solid var(--beige);
-}
-.qty-btn{
-  width:36px; height:36px;
-  border-radius:50%;
-  background:var(--beige);
-  color:var(--brown-dark);
-  font-size:1.1rem; font-weight:900;
-  display:flex; align-items:center; justify-content:center;
-  transition:all .2s ease;
-}
-.qty-btn:hover{ background:var(--orange); color:var(--white); }
-.qty-value{
-  font-family:var(--display);
-  font-size:1.2rem; font-weight:700;
-  color:var(--brown-dark);
-  min-width:30px; text-align:center;
-}
+
+
+
+
+
+
 .modal-actions{
   display:flex; gap:.8rem;
 }
-.modal-add{
-  flex:1;
-  background:var(--orange);
-  color:var(--white);
-  font-family:var(--sans);
-  font-size:.95rem; font-weight:700;
-  letter-spacing:.05em;
-  padding:1.1rem;
-  border-radius:50px;
-  text-transform:uppercase;
-  transition:all .3s ease;
-  display:flex; align-items:center; justify-content:center; gap:.5rem;
-}
-.modal-add:hover{ background:var(--orange-dark); transform:translateY(-2px); box-shadow:0 10px 30px rgba(255,107,26,0.4); }
+
+
 .modal-call{
   background:var(--brown);
   color:var(--saffron);
@@ -1403,44 +1349,14 @@ section{ padding:6rem 2rem; position:relative; }
 .modal-call:hover{ background:var(--brown-dark); }
 
 /* ============ CART TOAST ============ */
-.cart-toast{
-  position:fixed; bottom:2rem; right:2rem;
-  background:var(--brown-dark);
-  color:var(--beige);
-  padding:1rem 1.5rem;
-  border-radius:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.3);
-  display:flex; align-items:center; gap:1rem;
-  z-index:150;
-  border:2px solid var(--saffron);
-  transform:translateY(200%);
-  transition:transform .4s cubic-bezier(.2,.7,.2,1);
-  max-width:400px;
-}
-.cart-toast.show{ transform:translateY(0); }
-.cart-toast .icon{
-  width:40px; height:40px;
-  background:var(--saffron);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  color:var(--brown-dark);
-  font-size:1.2rem; font-weight:900;
-  flex-shrink:0;
-}
-.cart-toast .text{ flex:1; }
-.cart-toast .text strong{ color:var(--saffron); display:block; font-size:.95rem; }
-.cart-toast .text small{ color:rgba(245,233,212,0.8); font-size:.75rem; }
-.cart-toast .close-toast{
-  width:28px; height:28px;
-  background:rgba(245,233,212,0.15);
-  border-radius:50%;
-  color:var(--beige);
-  display:flex; align-items:center; justify-content:center;
-  font-size:.9rem; font-weight:900;
-  transition:all .3s ease;
-  cursor:pointer;
-}
-.cart-toast .close-toast:hover{ background:var(--orange); }
+
+
+
+
+
+
+
+
 
 /* ============ GALLERY (REAL PHOTOS) ============ */
 .gallery{
@@ -1953,7 +1869,7 @@ footer::before{
   .footer-grid{ grid-template-columns:1fr 1fr; }
   .modal-features{ grid-template-columns:1fr; }
   section{ padding:4rem 1.5rem; }
-  .cart-toast{ left:1rem; right:1rem; bottom:1rem; max-width:none; }
+  
 }
 @media (max-width: 568px){
   .hero-title{ font-size:3rem; }
@@ -2245,30 +2161,11 @@ footer::before{
       </div>
       <p class="modal-desc" id="modalDesc">Description here.</p>
       <div class="modal-features" id="modalFeatures"></div>
-      <div class="modal-qty">
-        <div class="modal-qty-label">Quantity</div>
-        <div class="qty-controls">
-          <button class="qty-btn" id="qtyMinus">−</button>
-          <span class="qty-value" id="qtyValue">1</span>
-          <button class="qty-btn" id="qtyPlus">+</button>
-        </div>
-      </div>
       <div class="modal-actions">
-        <button class="modal-add" id="modalAdd">🛒 Add to Order</button>
-        <a href="tel:3473127777" class="modal-call">📞 Call</a>
+        <a href="tel:3473127777" class="modal-call">📞 Call to Order</a>
       </div>
     </div>
   </div>
-</div>
-
-<!-- ============ CART TOAST ============ -->
-<div class="cart-toast" id="cartToast">
-  <div class="icon">✓</div>
-  <div class="text">
-    <strong id="toastTitle">Added to order!</strong>
-    <small id="toastSub">Call (347) 312-7777 to confirm</small>
-  </div>
-  <div class="close-toast" id="closeToast">✕</div>
 </div>
 
 <!-- ============ GALLERY (REAL PHOTOS) ============ -->
@@ -2682,8 +2579,7 @@ function renderMenu() {
             <p class="menu-card-desc">${item.desc}</p>
             <div class="menu-card-tags">${tagsHTML}</div>
             <div class="menu-card-footer">
-              <button class="menu-card-add" onclick="openModal(${item.id})">🛒 Add</button>
-              <button class="menu-card-info" onclick="openModal(${item.id})" title="Details">i</button>
+              <button class="menu-card-info" onclick="openModal(${item.id})" title="Details">i Details</button>
             </div>
           </div>
         </div>`;
@@ -2743,13 +2639,12 @@ clearBtn.addEventListener('click', () => {
 // ============ MODAL ============
 const modal = document.getElementById('itemModal');
 let currentModalItem = null;
-let currentQty = 1;
 
 function openModal(id) {
   const item = menuData.find(i => i.id === id);
   if (!item) return;
   currentModalItem = item;
-  currentQty = 1;
+   = 1;
 
   document.getElementById('modalTitle').innerHTML = `${item.name} <span class="ar">${item.ar}</span>`;
   const priceDisplay = item.combo
@@ -2770,7 +2665,6 @@ function openModal(id) {
     modalImg.textContent = item.emoji;
   }
 
-  document.getElementById('qtyValue').textContent = '1';
 
   const tagLabels = {halal:'Halal حلال',popular:'★ Popular',spicy:'🌶 Spicy',signature:'★ Signature',vegetarian:'🌱 Vegetarian',family:'👨‍👩‍👧‍👦 Family',kids:'👶 Kids'};
   document.getElementById('modalTags').innerHTML = item.tags.map(t => `<span class="menu-tag-pill ${t}">${tagLabels[t]||t}</span>`).join('');
@@ -2801,39 +2695,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-document.getElementById('qtyMinus').addEventListener('click', () => {
-  if (currentQty > 1) {
-    currentQty--;
-    document.getElementById('qtyValue').textContent = currentQty;
-  }
-});
-document.getElementById('qtyPlus').addEventListener('click', () => {
-  if (currentQty < 20) {
-    currentQty++;
-    document.getElementById('qtyValue').textContent = currentQty;
-  }
-});
-
-document.getElementById('modalAdd').addEventListener('click', () => {
-  if (!currentModalItem) return;
-  showToast(currentModalItem.name, `Quantity: ${currentQty} • Call to confirm`);
-  closeModal();
-});
-
-// ============ TOAST ============
-const toast = document.getElementById('cartToast');
-let toastTimeout;
-function showToast(title, sub) {
-  document.getElementById('toastTitle').textContent = title + ' added!';
-  document.getElementById('toastSub').textContent = sub;
-  toast.classList.add('show');
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove('show'), 4000);
-}
-document.getElementById('closeToast').addEventListener('click', () => {
-  toast.classList.remove('show');
-});
-
+// ============ SCROLL REVEAL ============
 // ============ SCROLL REVEAL ============
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
