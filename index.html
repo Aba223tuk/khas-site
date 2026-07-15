@@ -2644,7 +2644,7 @@ function openModal(id) {
   const item = menuData.find(i => i.id === id);
   if (!item) return;
   currentModalItem = item;
-   = 1;
+  document.body.style.overflow = 'hidden';
 
   document.getElementById('modalTitle').innerHTML = `${item.name} <span class="ar">${item.ar}</span>`;
   const priceDisplay = item.combo
