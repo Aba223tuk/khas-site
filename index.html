@@ -1095,23 +1095,6 @@ section{ padding:6rem 2rem; position:relative; }
   content:""; position:absolute; inset:0;
   background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3) 100%);
 }
-.menu-card-img .quick-view{
-  position:absolute; bottom:1rem; left:50%;
-  transform:translateX(-50%) translateY(20px);
-  background:var(--white);
-  color:var(--brown-dark);
-  font-family:var(--sans);
-  font-size:.7rem; font-weight:700;
-  letter-spacing:.1em;
-  padding:.5rem 1rem;
-  border-radius:50px;
-  opacity:0;
-  transition:all .3s ease;
-  z-index:3;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-.menu-card:hover .quick-view{ opacity:1; transform:translateX(-50%) translateY(0); }
 
 .menu-card-body{
   padding:1.5rem;
@@ -1153,6 +1136,16 @@ section{ padding:6rem 2rem; position:relative; }
   text-decoration:line-through;
   margin-right:.3rem;
 }
+.combo-tag{
+  font-size:.7rem;
+  background:var(--beige);
+  color:var(--brown-dark);
+  padding:.1rem .4rem;
+  border-radius:4px;
+  margin-left:.2rem;
+  font-weight:700;
+  letter-spacing:.05em;
+}
 .menu-card-desc{
   font-size:.9rem;
   color:var(--ink-soft);
@@ -1182,171 +1175,6 @@ section{ padding:6rem 2rem; position:relative; }
 .menu-tag-pill.meal{ background:var(--orange-light); color:var(--white); border-color:var(--orange-light); }
 .menu-tag-pill.family{ background:var(--brown); color:var(--beige); border-color:var(--brown); }
 .menu-tag-pill.kids{ background:var(--tan); color:var(--brown-dark); border-color:var(--tan); }
-
-.menu-card-footer{
-  display:flex; gap:.5rem; align-items:center;
-  padding-top:1rem;
-  border-top:1px solid var(--beige);
-}
-
-
-.menu-card-info{
-  width:38px; height:38px;
-  border-radius:50%;
-  background:var(--beige);
-  color:var(--brown);
-  display:flex; align-items:center; justify-content:center;
-  font-size:.9rem; font-weight:900;
-  transition:all .3s ease;
-  flex-shrink:0;
-}
-.menu-card-info:hover{ background:var(--brown); color:var(--saffron); }
-
-/* ============ MODAL ============ */
-.modal-backdrop{
-  position:fixed; inset:0; z-index:200;
-  background:rgba(26,15,8,0.7);
-  backdrop-filter:blur(8px);
-  display:none; align-items:center; justify-content:center;
-  padding:1rem;
-  opacity:0;
-  transition:opacity .3s ease;
-}
-.modal-backdrop.active{ display:flex; opacity:1; }
-.modal{
-  background:var(--white);
-  border-radius:24px;
-  max-width:600px; width:100%;
-  max-height:90vh;
-  overflow-y:auto;
-  box-shadow:0 40px 100px rgba(0,0,0,0.5);
-  animation:scaleIn .3s ease;
-  position:relative;
-}
-.modal-close{
-  position:absolute; top:1rem; right:1rem;
-  width:40px; height:40px;
-  background:rgba(255,255,255,0.95);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1.1rem; font-weight:900;
-  color:var(--brown-dark);
-  z-index:2;
-  cursor:pointer;
-  transition:all .3s ease;
-  box-shadow:0 4px 15px rgba(0,0,0,0.2);
-}
-.modal-close:hover{ background:var(--orange); color:var(--white); transform:rotate(90deg); }
-.modal-img{
-  height:300px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:8rem;
-  position:relative;
-  color:var(--white);
-  background-size: cover;
-  background-position: center;
-}
-.modal-img.has-photo{ color: transparent; }
-.modal-img.has-photo::after{
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3) 100%);
-}
-.modal-img::before{
-  content:""; position:absolute; inset:0;
-  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 60%);
-}
-.modal-body{ padding:2rem; }
-.modal-title{
-  font-family:var(--serif);
-  font-size:2rem; font-weight:700;
-  color:var(--brown-dark);
-  margin-bottom:.3rem;
-}
-.modal-title .ar{
-  display:block;
-  font-family:var(--arabic);
-  font-size:1.3rem; font-weight:600;
-  color:var(--orange-dark);
-  margin-top:.3rem;
-  direction:rtl;
-}
-.modal-price-row{
-  display:flex; align-items:center; gap:1rem;
-  margin:1rem 0 1.5rem;
-  padding-bottom:1.5rem;
-  border-bottom:1px solid var(--beige);
-  flex-wrap: wrap;
-}
-.modal-price{
-  font-family:var(--display);
-  font-size:2.2rem; color:var(--orange);
-  letter-spacing:.02em;
-}
-.modal-price .old{
-  font-size:1.2rem; color:var(--muted);
-  text-decoration:line-through;
-  margin-right:.5rem;
-}
-.modal-price-suffix{
-  font-family: var(--sans);
-  font-size: .9rem;
-  color: var(--ink-muted);
-  font-weight: 600;
-}
-.modal-desc{
-  font-size:1rem; line-height:1.7;
-  color:var(--ink-soft);
-  margin-bottom:1.5rem;
-}
-.modal-features{
-  display:grid; grid-template-columns:1fr 1fr;
-  gap:.8rem; margin-bottom:1.5rem;
-}
-.modal-feature{
-  display:flex; align-items:center; gap:.6rem;
-  padding:.8rem 1rem;
-  background:var(--beige-light);
-  border-radius:12px;
-  font-size:.85rem; font-weight:600;
-  color:var(--ink-soft);
-}
-.modal-feature .icon{
-  width:32px; height:32px;
-  background:var(--orange);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1rem;
-  flex-shrink:0;
-  color:var(--white);
-}
-.modal-tags{
-  display:flex; flex-wrap:wrap; gap:.4rem;
-  margin-bottom:1.5rem;
-}
-
-
-
-
-
-
-.modal-actions{
-  display:flex; gap:.8rem;
-}
-
-
-.modal-call{
-  background:var(--brown);
-  color:var(--saffron);
-  font-family:var(--sans);
-  font-size:.95rem; font-weight:700;
-  padding:1.1rem 1.5rem;
-  border-radius:50px;
-  text-transform:uppercase;
-  transition:all .3s ease;
-  display:flex; align-items:center; gap:.5rem;
-  text-decoration:none;
-}
-.modal-call:hover{ background:var(--brown-dark); }
 
 /* ============ CART TOAST ============ */
 
@@ -1867,7 +1695,6 @@ footer::before{
   .interior-grid{ grid-template-columns:1fr; }
   .catering-features{ grid-template-columns: repeat(2, 1fr); }
   .footer-grid{ grid-template-columns:1fr 1fr; }
-  .modal-features{ grid-template-columns:1fr; }
   section{ padding:4rem 1.5rem; }
   
 }
@@ -1885,7 +1712,6 @@ footer::before{
   .menu-tab{ font-size:.75rem; padding:.6rem 1rem; }
   .about-stats{ grid-template-columns:repeat(3, 1fr); gap:1rem; }
   .about-stat .num{ font-size:2rem; }
-  .modal-actions{ flex-direction:column; }
   .interior-photo{ height: 300px; }
   .catering-features{ grid-template-columns: 1fr; }
 }
@@ -2147,26 +1973,6 @@ footer::before{
     <div id="menuContainer"></div>
   </div>
 </section>
-
-<!-- ============ ITEM MODAL ============ -->
-<div class="modal-backdrop" id="itemModal">
-  <div class="modal">
-    <button class="modal-close" id="modalClose">✕</button>
-    <div class="modal-img" id="modalImg">🍽️</div>
-    <div class="modal-body">
-      <h2 class="modal-title" id="modalTitle">Item Name</h2>
-      <div class="modal-price-row">
-        <div class="modal-price" id="modalPrice">$0.00</div>
-        <div class="modal-tags" id="modalTags"></div>
-      </div>
-      <p class="modal-desc" id="modalDesc">Description here.</p>
-      <div class="modal-features" id="modalFeatures"></div>
-      <div class="modal-actions">
-        <a href="tel:3473127777" class="modal-call">📞 Call to Order</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ============ GALLERY (REAL PHOTOS) ============ -->
 <section class="gallery" id="gallery">
@@ -2553,7 +2359,7 @@ function renderMenu() {
       <div class="menu-grid" style="margin-bottom:3rem">`;
     items.forEach(item => {
       const priceDisplay = item.combo
-        ? `<span class="old">$${item.price.toFixed(2)}</span>$${item.combo.toFixed(2)} <span class="modal-price-suffix" style="font-size:.7rem;background:var(--beige);padding:.1rem .4rem;border-radius:4px;margin-left:.2rem;">Combo</span>`
+        ? `<span class="old">$${item.price.toFixed(2)}</span>$${item.combo.toFixed(2)} <span class="combo-tag">Combo</span>`
         : `$${item.price.toFixed(2)}`;
       const tagsHTML = item.tags.map(t => {
         const labels = {
@@ -2569,7 +2375,6 @@ function renderMenu() {
         <div class="menu-card" data-id="${item.id}">
           <div class="menu-card-img ${hasPhoto}" ${photoStyle}>
             ${item.emoji}
-            <div class="quick-view">Quick View</div>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
@@ -2578,9 +2383,6 @@ function renderMenu() {
             </div>
             <p class="menu-card-desc">${item.desc}</p>
             <div class="menu-card-tags">${tagsHTML}</div>
-            <div class="menu-card-footer">
-              <button class="menu-card-info" onclick="openModal(${item.id})" title="Details">i Details</button>
-            </div>
           </div>
         </div>`;
     });
@@ -2635,67 +2437,6 @@ clearBtn.addEventListener('click', () => {
   renderMenu();
   searchInput.focus();
 });
-
-// ============ MODAL ============
-const modal = document.getElementById('itemModal');
-let currentModalItem = null;
-
-function openModal(id) {
-  const item = menuData.find(i => i.id === id);
-  if (!item) return;
-  currentModalItem = item;
-  document.body.style.overflow = 'hidden';
-
-  document.getElementById('modalTitle').innerHTML = `${item.name} <span class="ar">${item.ar}</span>`;
-  const priceDisplay = item.combo
-    ? `<span class="old">$${item.price.toFixed(2)}</span>$${item.combo.toFixed(2)} <span class="modal-price-suffix">Combo</span>`
-    : `$${item.price.toFixed(2)}`;
-  document.getElementById('modalPrice').innerHTML = priceDisplay;
-  document.getElementById('modalDesc').textContent = item.desc;
-
-  // Modal image - use photo if available, else emoji
-  const modalImg = document.getElementById('modalImg');
-  if (item.photo) {
-    modalImg.classList.add('has-photo');
-    modalImg.style.backgroundImage = `url('images/${item.photo}')`;
-    modalImg.textContent = '';
-  } else {
-    modalImg.classList.remove('has-photo');
-    modalImg.style.backgroundImage = '';
-    modalImg.textContent = item.emoji;
-  }
-
-
-  const tagLabels = {halal:'Halal حلال',popular:'★ Popular',spicy:'🌶 Spicy',signature:'★ Signature',vegetarian:'🌱 Vegetarian',family:'👨‍👩‍👧‍👦 Family',kids:'👶 Kids'};
-  document.getElementById('modalTags').innerHTML = item.tags.map(t => `<span class="menu-tag-pill ${t}">${tagLabels[t]||t}</span>`).join('');
-
-  const featureIcons = {0:'🥩',1:'🔥',2:'🌿',3:'✨',4:'⭐'};
-  document.getElementById('modalFeatures').innerHTML = item.features.map((f, i) => `
-    <div class="modal-feature">
-      <div class="icon">${featureIcons[i] || '✓'}</div>
-      <div>${f}</div>
-    </div>
-  `).join('');
-
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-  currentModalItem = null;
-}
-
-document.getElementById('modalClose').addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-});
-
-// ============ SCROLL REVEAL ============
 // ============ SCROLL REVEAL ============
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
