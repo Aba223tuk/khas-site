@@ -1196,30 +1196,16 @@ section{ padding:6rem 2rem; position:relative; }
   position:relative; overflow:hidden;
   border-radius:20px;
   cursor:pointer;
-  display:flex; align-items:flex-end; justify-content:center;
-  flex-direction:column;
-  color:var(--white); font-family:var(--display);
-  font-size:1.3rem; letter-spacing:.1em;
+  display:block;
+  color:var(--white);
   transition:all .5s ease;
   border:2px solid var(--brown);
   background-size: cover;
   background-position: center;
-  padding: 1.5rem;
   text-align: right;
 }
-.gallery-item::before{
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(180deg, transparent 30%, rgba(26,15,8,0.85) 100%);
-  z-index: 1;
-  transition: all .3s ease;
-}
+.gallery-item::before{ display:none; }
 .gallery-item:hover{ transform:scale(.98); border-color:var(--saffron); }
-.gallery-item:hover::before{ background: linear-gradient(180deg, rgba(255,107,26,0.3) 0%, rgba(26,15,8,0.9) 100%); }
-.gallery-item-content{
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
 .gallery-item-1{ background-image: url('images/mix-grill.jpg'); }
 .gallery-item-2{ background-image: url('images/qabeli-palow.jpg'); }
 .gallery-item-3{ background-image: url('images/chicken-rice.jpg'); }
@@ -1227,32 +1213,7 @@ section{ padding:6rem 2rem; position:relative; }
 .gallery-item-5{ display:none; }
 .gallery-item-6{ display:none; }
 
-.gallery-item .emoji{ display: none; }
-.gallery-item .label{ 
-  font-size:1.4rem; 
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  display: block;
-}
-.gallery-item .ar{ 
-  font-size:1rem; 
-  margin-top:.3rem; 
-  opacity:.9; 
-  font-family:var(--arabic);
-  color: var(--saffron);
-  display: block;
-}
-.gallery-item .price{
-  display: inline-block;
-  background: var(--saffron);
-  color: var(--brown-dark);
-  font-size: .9rem;
-  padding: .2rem .7rem;
-  border-radius: 50px;
-  margin-top: .5rem;
-  letter-spacing: .05em;
-  font-family: var(--sans);
-  font-weight: 700;
-}
+
 
 /* ============ INTERIOR SECTION ============ */
 .interior{
@@ -1957,34 +1918,10 @@ footer::before{
       <div class="section-ar">تصاویر — نگاهی به سفره ما</div>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item gallery-item-1">
-        <div class="gallery-item-content">
-          <span class="label">MIX GRILL PLATTER</span>
-          <span class="ar">سینی میکس گریل</span>
-          <span class="price">$17.99</span>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-2">
-        <div class="gallery-item-content">
-          <span class="label">QABELI PALAOW</span>
-          <span class="ar">قابلی پلو</span>
-          <span class="price">From $18.99</span>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-3">
-        <div class="gallery-item-content">
-          <span class="label">CHICKEN OVER RICE</span>
-          <span class="ar">مرغ با برنج</span>
-          <span class="price">$10.99</span>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-4">
-        <div class="gallery-item-content">
-          <span class="label">LAMB OVER RICE</span>
-          <span class="ar">گوشت با برنج</span>
-          <span class="price">$10.99</span>
-        </div>
-      </div>
+      <div class="gallery-item gallery-item-1"></div>
+      <div class="gallery-item gallery-item-2"></div>
+      <div class="gallery-item gallery-item-3"></div>
+      <div class="gallery-item gallery-item-4"></div>
     </div>
   </div>
 </section>
