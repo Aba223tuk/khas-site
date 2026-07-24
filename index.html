@@ -1852,15 +1852,15 @@ footer::before{
     <!-- Category Tabs -->
     <div class="menu-tabs" id="menuTabs">
       <button class="menu-tab active" data-tab="all">All <span class="count" id="count-all">0</span></button>
-      <button class="menu-tab" data-tab="appetizers"><span class="icon">🥟</span> Appetizers <span class="count">4</span></button>
-      <button class="menu-tab" data-tab="kabobs"><span class="icon">🍢</span> Entree Kabobs <span class="count">7</span></button>
+      <button class="menu-tab" data-tab="appetizers"><span class="icon">🥟</span> Appetizers <span class="count">5</span></button>
+      <button class="menu-tab" data-tab="kabobs"><span class="icon">🍢</span> Entree Kabobs <span class="count">10</span></button>
       <button class="menu-tab" data-tab="gyros"><span class="icon">🌯</span> Gyros <span class="count">10</span></button>
       <button class="menu-tab" data-tab="palow"><span class="icon">🍚</span> Kabuli Palao <span class="count">3</span></button>
       <button class="menu-tab" data-tab="burgers"><span class="icon">🍔</span> Burgers <span class="count">6</span></button>
       <button class="menu-tab" data-tab="falafel"><span class="icon">🧆</span> Falafel <span class="count">3</span></button>
       <button class="menu-tab" data-tab="seafood"><span class="icon">🐟</span> Fish/Shrimp <span class="count">5</span></button>
       <button class="menu-tab" data-tab="sandwiches"><span class="icon">🥖</span> Sandwiches <span class="count">2</span></button>
-      <button class="menu-tab" data-tab="sides"><span class="icon">🍟</span> Sides & More <span class="count">11</span></button>
+      <button class="menu-tab" data-tab="sides"><span class="icon">🍟</span> Sides & More <span class="count">14</span></button>
     </div>
 
     <!-- All categories will be injected here by JS -->
@@ -2073,18 +2073,22 @@ footer::before{
 const menuData = [
   // APPETIZERS
   { id:1, category:'appetizers', name:'Starter Platter', ar:'استارتر', price:5.99, desc:'Mozzarella sticks (6pcs) with marinara dipping sauce — golden, gooey perfection.', emoji:'🧀', tags:['popular','vegetarian'], features:['6 Mozzarella Sticks','Marinara Sauce','Crispy'] },
-  { id:2, category:'appetizers', name:'Samosa (Chicken)', ar:'سمبوسه مرغ', price:4.99, desc:'Crispy golden pastries stuffed with spiced ground chicken. A true Afghan favorite.', emoji:'🥟', tags:['halal','popular'], features:['Crispy Pastry','Spiced Chicken','Afghan Favorite'] },
+  { id:2, category:'appetizers', name:'Samosa (Chicken)', ar:'سمبوسه مرغ', price:5.99, desc:'Crispy golden pastries stuffed with spiced ground chicken. A true Afghan favorite.', emoji:'🥟', tags:['halal','popular'], features:['Crispy Pastry','Spiced Chicken','Afghan Favorite'] },
   { id:3, category:'appetizers', name:'Onion Rings', ar:'پیاز سرخ شده', price:5.99, desc:'Ten pieces of golden, beer-battered onion rings, crispy outside and tender inside.', emoji:'🧅', tags:['popular','vegetarian'], features:['10 Pieces','Crispy','Beer-Battered'] },
   { id:4, category:'appetizers', name:'Veggie Samosa', ar:'سمبوسه سبزیجات', price:1.99, desc:'Crispy pastry pockets filled with spiced potatoes, peas, and herbs. Vegetarian delight.', emoji:'🥟', tags:['vegetarian'], features:['Vegetarian','Spiced Potato','Hand-Made'] },
+  { id:58, category:'appetizers', name:'Loaded Fries', ar:'سیب زمینی لودد', price:8.99, desc:'Crispy fries piled high with toppings — melty, savory, and made for sharing.', emoji:'🍟', tags:['popular'], features:['Piled High','Shareable','Fan Favorite'] },
 
   // ENTREE KABOBS (from menu)
-  { id:5, category:'kabobs', name:'Chicken Tikka', ar:'چیکن تیکا', price:13.99, desc:'Marinated chicken chunks, grilled to smoky perfection. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal','popular'], features:['Served with Rice','Served with Salad','Served with Bread'] },
-  { id:6, category:'kabobs', name:'Chicken Kofta', ar:'کوفته مرغ', price:11.99, desc:'Hand-seasoned ground chicken skewers, flame-grilled with onions and peppers. With rice, salad, and bread.', emoji:'🍢', tags:['halal'], features:['Hand-Seasoned','Served with Rice','Skewered'] },
-  { id:7, category:'kabobs', name:'Beef Kota', ar:'کوفته گوشت', price:12.99, desc:'Seasoned ground beef skewers, grilled to juicy perfection. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal'], features:['Ground Beef','Served with Rice','Flame-Grilled'] },
-  { id:8, category:'kabobs', name:'Mix Grill', ar:'میکس گریل', price:17.99, desc:'The ultimate platter — Lamb, Chicken & Beef together. Best value! Served with rice, salad, and bread.', emoji:'🍖', photo:'mix-grill.jpg', tags:['halal','signature','popular'], features:['3 Skewers','Lamb + Chicken + Beef','Best Value'] },
-  { id:9, category:'kabobs', name:'Lamb Tikka', ar:'تیکا گوشت', price:14.99, desc:'Tender pieces of lamb, marinated in yogurt and Afghan spices, then char-grilled. With rice, salad, and bread.', emoji:'🍢', photo:'lamb-rice.jpg', tags:['halal'], features:['Premium Lamb','Afghan Spices','Served with Rice'] },
-  { id:10, category:'kabobs', name:'Lamb Chops', ar:'بره کباب', price:17.99, desc:'Thick-cut lamb chops, marinated and grilled over open flame. Served with rice, salad, and bread.', emoji:'🍖', tags:['halal'], features:['Thick-Cut','Open Flame','Served with Rice'] },
-  { id:11, category:'kabobs', name:'Chapli Kabab', ar:'چپلی کباب', price:13.99, desc:'Peshawar-style flat minced beef kabob, spiced with coriander, cumin, and chili. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal','spicy'], features:['Peshawar Style','Spiced','Flat Patty'] },
+  { id:5, category:'kabobs', name:'Chicken Kabob', ar:'چیکن کباب', price:14.99, desc:'Marinated chicken chunks, grilled to smoky perfection. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal','popular'], features:['Served with Rice','Served with Salad','Served with Bread'] },
+  { id:6, category:'kabobs', name:'Chicken Kofta', ar:'کوفته مرغ', price:12.99, desc:'Hand-seasoned ground chicken skewers, flame-grilled with onions and peppers. With rice, salad, and bread.', emoji:'🍢', tags:['halal'], features:['Hand-Seasoned','Served with Rice','Skewered'] },
+  { id:7, category:'kabobs', name:'Beef Kofta', ar:'کوفته گوشت', price:13.99, desc:'Seasoned ground beef skewers, grilled to juicy perfection. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal'], features:['Ground Beef','Served with Rice','Flame-Grilled'] },
+  { id:8, category:'kabobs', name:'Mix Grill', ar:'میکس گریل', price:21.99, desc:'The ultimate platter — Lamb, Chicken & Beef together. Best value! Served with rice, salad, and bread.', emoji:'🍖', photo:'mix-grill.jpg', tags:['halal','signature','popular'], features:['3 Skewers','Lamb + Chicken + Beef','Best Value'] },
+  { id:9, category:'kabobs', name:'Lamb Kebob', ar:'کباب گوشت', price:15.99, desc:'Tender pieces of lamb, marinated in yogurt and Afghan spices, then char-grilled. With rice, salad, and bread.', emoji:'🍢', photo:'lamb-rice.jpg', tags:['halal'], features:['Premium Lamb','Afghan Spices','Served with Rice'] },
+  { id:10, category:'kabobs', name:'Lamb Chops', ar:'بره کباب', price:19.99, desc:'Thick-cut lamb chops, marinated and grilled over open flame. Served with rice, salad, and bread.', emoji:'🍖', tags:['halal'], features:['Thick-Cut','Open Flame','Served with Rice'] },
+  { id:11, category:'kabobs', name:'Chapli Kabob', ar:'چپلی کباب', price:13.99, desc:'Peshawar-style flat minced beef kabob, spiced with coriander, cumin, and chili. Served with rice, salad, and bread.', emoji:'🍢', tags:['halal','spicy'], features:['Peshawar Style','Spiced','Flat Patty'] },
+  { id:55, category:'kabobs', name:'Fish Kabob', ar:'کباب ماهی', price:17.99, desc:'Marinated fish grilled on the skewer. Served with rice, salad, and bread.', emoji:'🐟', tags:['halal'], features:['Served with Rice','Served with Salad','Served with Bread'] },
+  { id:56, category:'kabobs', name:'Platter for 4 People', ar:'پلاتر برای ۴ نفر', price:59.99, desc:'1 skewer each: lamb, chicken, kofta — with rice, salad, and bread. Perfect for the family.', emoji:'🍖', tags:['halal','family'], features:['1 Skewer Each','Lamb + Chicken + Kofta','Feeds 4'] },
+  { id:57, category:'kabobs', name:'Platter for 8 People', ar:'پلاتر برای ۸ نفر', price:109.99, desc:'1 skewer each: lamb, chicken, kofta — with rice, salad, and bread. Great for gatherings.', emoji:'🍖', tags:['halal','family'], features:['1 Skewer Each','Lamb + Chicken + Kofta','Feeds 8'] },
 
   // GYROS / OVER RICE
   { id:12, category:'gyros', name:'Chicken Over Rice', ar:'مرغ با برنج', price:10.99, desc:'Tender marinated chicken over our aromatic basmati rice with fresh salad and white sauce.', emoji:'🌯', photo:'chicken-rice.jpg', tags:['halal','popular'], features:['Halal Meat','Saffron Rice','White Sauce'] },
@@ -2099,7 +2103,7 @@ const menuData = [
   { id:21, category:'gyros', name:'Chicken Leg / Rice', ar:'ران مرغ با برنج', price:10.99, desc:'A whole roasted chicken leg quarter over our signature saffron rice.', emoji:'🍗', tags:['halal'], features:['Whole Leg','Saffron Rice','Halal'] },
 
   // KABULI PALAOW
-  { id:22, category:'palow', name:'Qabeli Palaow — Lamb', ar:'قابلی پلو', price:18.99, desc:'Afghanistan\'s national dish — fragrant basmati rice topped with sweet carrots, raisins, almonds, and tender lamb.', emoji:'🍚', photo:'qabeli-palow.jpg', tags:['halal','signature'], features:['National Dish','Sweet & Savory','Almonds & Raisins'] },
+  { id:22, category:'palow', name:'Qabeli Palaow — Lamb', ar:'قابلی پلو', price:19.99, desc:'Afghanistan\'s national dish — fragrant basmati rice topped with sweet carrots, raisins, almonds, and tender lamb.', emoji:'🍚', photo:'qabeli-palow.jpg', tags:['halal','signature'], features:['National Dish','Sweet & Savory','Almonds & Raisins'] },
   { id:23, category:'palow', name:'Qabeli Palaow — Lamb Shank', ar:'قابلی پلو با لنگه', price:19.99, desc:'Our famous Qabeli Palow with a slow-braised fall-off-the-bone lamb shank on top.', emoji:'🍖', tags:['halal','popular'], features:['Slow-Braised','Fall-Off-Bone','Signature'] },
   { id:24, category:'palow', name:'Qabeli Palaow — Chicken', ar:'قابلی پلو مرغ', price:18.99, desc:'Same beautiful sweet-and-savory rice, topped with our perfectly spiced chicken.', emoji:'🍗', tags:['halal'], features:['Sweet & Savory','Spiced Chicken','Afghan Classic'] },
 
