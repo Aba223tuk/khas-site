@@ -1158,6 +1158,7 @@ section{ padding:6rem 2rem; position:relative; }
 .gallery-card:hover{ border-color:var(--saffron); transform:translateY(-4px); }
 .gallery-card.tall{ grid-row:span 2; }
 .gallery-card.wide{ grid-column:span 2; }
+.gallery-card.fish img{ object-position:center 40%; }
 .gallery-card img{
   width:100%; height:100%;
   object-fit:cover;
@@ -1975,7 +1976,7 @@ footer::before{
           <span class="gallery-price">$109.99</span>
         </figcaption>
       </figure>
-      <figure class="gallery-card wide">
+      <figure class="gallery-card">
         <img src="images/gallery/salmon-kabab.jpg" alt="Salmon Kabab over rice" loading="lazy">
         <figcaption class="gallery-caption">
           <div class="gallery-dish">
@@ -1983,6 +1984,16 @@ footer::before{
             <span class="ar">کباب سالمون</span>
           </div>
           <span class="gallery-price">$17.99</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-card fish">
+        <img src="images/gallery/tilapia-fish.jpg" alt="Fried tilapia fish over rice with fries and salad" loading="lazy">
+        <figcaption class="gallery-caption">
+          <div class="gallery-dish">
+            <span class="en">Tilapia Fish</span>
+            <span class="ar">ماهی تیلاپیا</span>
+          </div>
+          <span class="gallery-price">$11.99</span>
         </figcaption>
       </figure>
     </div>
