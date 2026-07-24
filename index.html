@@ -1888,7 +1888,7 @@ footer::before{
       <button class="menu-tab" data-tab="falafel"><span class="icon">🧆</span> Falafel <span class="count">3</span></button>
       <button class="menu-tab" data-tab="seafood"><span class="icon">🐟</span> Fish/Shrimp <span class="count">5</span></button>
       <button class="menu-tab" data-tab="sandwiches"><span class="icon">🥖</span> Sandwiches <span class="count">2</span></button>
-      <button class="menu-tab" data-tab="sides"><span class="icon">🍟</span> Sides & More <span class="count">14</span></button>
+      <button class="menu-tab" data-tab="sides"><span class="icon">🍟</span> Sides & More <span class="count">12</span></button>
     </div>
 
     <!-- All categories will be injected here by JS -->
@@ -2214,8 +2214,8 @@ const menuData = [
   // BURGERS
   { id:25, category:'burgers', name:'Chicken Burger', ar:'برگر مرغ', price:5.99, desc:'Juicy halal chicken patty with crisp lettuce and our special sauce.', emoji:'🍔', tags:['halal'], features:['Halal Patty','Crisp Lettuce','Special Sauce'] },
   { id:26, category:'burgers', name:'Cheese Burger', ar:'چیز برگر', price:5.99, desc:'Classic American-style cheeseburger, made with 100% halal beef.', emoji:'🍔', tags:['halal'], features:['Halal Beef','Melted Cheese','American Style'] },
-  { id:27, category:'burgers', name:'Double Chicken Burger', ar:'دوبل برگر مرغ', price:11.99, desc:'Two stacked halal chicken patties with double cheese. For serious appetites.', emoji:'🍔', tags:['halal'], features:['Double Patty','Double Cheese','Big Appetite'] },
-  { id:28, category:'burgers', name:'Double Cheese Burger', ar:'دوبل چیز برگر', price:11.99, desc:'Two halal beef patties loaded with melted cheese. A Brooklyn classic.', emoji:'🍔', tags:['halal'], features:['Double Beef','Extra Cheese','BK Classic'] },
+  { id:27, category:'burgers', name:'Double Chicken Burger Meal', ar:'وعده دوبل برگر مرغ', price:11.99, desc:'Meal deal — two stacked halal chicken patties with double cheese, served with fries and a drink.', emoji:'🍔', tags:['halal'], features:['Meal Deal','Double Patty','With Fries & Drink'] },
+  { id:28, category:'burgers', name:'Double Cheese Burger Meal', ar:'وعده دوبل چیز برگر', price:11.99, desc:'Meal deal — two halal beef patties loaded with melted cheese, served with fries and a drink.', emoji:'🍔', tags:['halal'], features:['Meal Deal','Double Beef','With Fries & Drink'] },
   { id:29, category:'burgers', name:'Chicken Burger Meal', ar:'وعده برگر مرغ', price:8.99, desc:'Chicken burger served with seasoned fries and a drink. Complete meal deal.', emoji:'🍔', tags:['halal','popular'], features:['Meal Deal','With Fries','With Drink'] },
   { id:30, category:'burgers', name:'Cheese Burger Meal', ar:'وعده چیز برگر', price:8.99, desc:'Cheeseburger combo with crispy seasoned fries and a refreshing drink.', emoji:'🍔', tags:['halal','popular'], features:['Meal Deal','With Fries','With Drink'] },
 
@@ -2237,12 +2237,10 @@ const menuData = [
 
   // SIDES & EXTRAS
   { id:41, category:'sides', name:'Small Fries', ar:'سیب زمینی کوچک', price:3.99, desc:'Crispy golden fries — our small portion, perfect as a side.', emoji:'🍟', tags:['vegetarian'], features:['Crispy','Golden','Small'] },
-  { id:42, category:'sides', name:'Medium Fries', ar:'سیب زمینی متوسط', price:4.99, desc:'A medium portion of our crispy seasoned fries.', emoji:'🍟', tags:['vegetarian'], features:['Seasoned','Medium','Crispy'] },
   { id:43, category:'sides', name:'Large Fries', ar:'سیب زمینی بزرگ', price:5.99, desc:'A generous portion of our famous seasoned fries.', emoji:'🍟', tags:['vegetarian'], features:['Seasoned','Large','Generous'] },
   { id:44, category:'sides', name:'Hot Wings with Fries', ar:'بال مرغ با سیب زمینی', price:11.99, desc:'Spicy hot wings served with crispy fries. Perfect for sharing!', emoji:'🍗', tags:['spicy','popular'], features:['Spicy','With Fries','Shareable'] },
   { id:45, category:'sides', name:'Chicken Nugget Meal', ar:'وعده ناگت', price:6.99, desc:'Golden chicken nuggets with fries and a drink. Kid-approved!', emoji:'🍗', tags:['kids'], features:['Kid-Approved','With Fries','With Drink'] },
   { id:46, category:'sides', name:'Chicken Tenders Meal', ar:'وعده تندر', price:7.99, desc:'Crispy chicken tenders served with fries and a drink.', emoji:'🍗', tags:['kids'], features:['Crispy','With Fries','Kid Favorite'] },
-  { id:47, category:'sides', name:'Fried Chicken Meal', ar:'وعده مرغ سوخاری', price:7.99, desc:'Crispy fried chicken pieces with fries and a drink. A comfort classic.', emoji:'🍗', tags:['kids'], features:['Crispy','With Fries','Comfort Food'] },
   { id:48, category:'sides', name:'Firnee', ar:'فرنی', price:5.99, desc:'Traditional Afghan milk pudding with cardamom, rose water, and pistachios.', emoji:'🍮', tags:['vegetarian'], features:['Traditional','Cardamom','Pistachios'] },
   { id:49, category:'sides', name:'Baklava', ar:'باقلوا', price:5.99, desc:'Layers of crisp filo, chopped nuts, and sweet honey syrup. Pure bliss.', emoji:'🍰', tags:['vegetarian','popular'], features:['Honey Syrup','Chopped Nuts','Sweet Treat'] },
   { id:50, category:'sides', name:'Green Tea', ar:'چای سبز', price:1.00, desc:'Hot, aromatic green tea — the perfect finish to any Afghan meal.', emoji:'🫖', tags:['vegetarian'], features:['Hot','Aromatic','$1 Only'] },
